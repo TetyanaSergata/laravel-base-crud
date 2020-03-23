@@ -16,7 +16,7 @@ class FilmController extends Controller
     {
       $films = Film::all();
       dd($films);
-      //
+
     }
 
     /**
@@ -26,7 +26,7 @@ class FilmController extends Controller
      */
     public function create()
     {
-        //
+      return view('films.create');
     }
 
     /**
@@ -37,7 +37,33 @@ class FilmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        $data = $request->all();
+        $film = new Film;
+        
+        $film->Titolo_originale = $data['Titolo_originale'];
+
+        $film->Nazione = $data['Nazione'];
+
+        $film->Anno = $data['Anno'];
+
+        $film->Genere = $data['Genere'];
+
+        $film->Durata = $data['Durata'];
+
+        $film->Regia = $data['Regia'];
+
+        $film->Cast = $data['Cast'];
+
+        $film->Produzione = $data['Produzione'];
+
+        $film->Data_di_uscita = $data['Data_di_uscita'];
+
+        $save = $film->save();
+
+        if ($save == true) {
+          return redirect()->route('films.index');
+        }
     }
 
     /**
