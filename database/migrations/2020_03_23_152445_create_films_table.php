@@ -15,7 +15,7 @@ class CreateFilmsTable extends Migration
     {
         Schema::create('films', function (Blueprint $table) {
             $table->id();
-            $table->varchar('Titolo');
+            $table->varchar('Titolo_originale');
             $table->varchar('Nazione');
             $table->year('Anno');
             $table->varchar('Genere');
