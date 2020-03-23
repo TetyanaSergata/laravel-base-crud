@@ -40,7 +40,7 @@ class FilmController extends Controller
         // dd($request->all());
         $data = $request->all();
         $film = new Film;
-        
+
         $film->Titolo_originale = $data['Titolo_originale'];
 
         $film->Nazione = $data['Nazione'];
