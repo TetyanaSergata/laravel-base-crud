@@ -12,7 +12,6 @@
        <input type="text" name="Nazione" value="Nazione" placeholder="Nazione">
        <input type="text" name="Anno" value="Anno" placeholder="Anno">
        <input type="text" name="Genere" value="Genere" placeholder=Genere"">
-       <input type="text" name="Genere" value="Genere" placeholder="Genere">
        <input type="text" name="Durata" value="Durata" placeholder="Durata">
        <input type="text" name="Regia" value="Regia" placeholder="Regia">
        <input type="text" name="Cast" value="Cast" placeholder="Cast">
