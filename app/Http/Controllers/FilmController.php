@@ -41,31 +41,28 @@ class FilmController extends Controller
     {
         // dd($request->all());
         $data = $request->all();
+        // @dd($data);
         $film = new Film;
 
-        $film->Titolo_originale = $data['Titolo_originale'];
+        // $film->Titolo_originale = $data['Titolo_originale'];
+        // $film->Nazione = $data['Nazione'];
+        // $film->Anno = $data['Anno'];
+        // $film->Genere = $data['Genere'];
+        // $film->Durata = $data['Durata'];
+        // $film->Regia = $data['Regia'];
+        // $film->Cast = $data['Cast'];
+        // $film->Produzione = $data['Produzione'];
+        // $film->Data_di_uscita = $data['Data_di_uscita'];
 
-        $film->Nazione = $data['Nazione'];
+        // SCORCIATTOIA
+        $film->fill($data);
 
-        $film->Anno = $data['Anno'];
-
-        $film->Genere = $data['Genere'];
-
-        $film->Durata = $data['Durata'];
-
-        $film->Regia = $data['Regia'];
-
-        $film->Cast = $data['Cast'];
-
-        $film->Produzione = $data['Produzione'];
-
-        $film->Data_di_uscita = $data['Data_di_uscita'];
-
-        $save = $film->save();
+        $saved = $film->save();
 
         if ($save == true) {
           return redirect()->route('films.index');
         }
+        @dd('Non è stato salvato');
     }
 
     /**
