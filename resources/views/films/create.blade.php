@@ -20,34 +20,34 @@
         <input name="_method" type="hidden" value="POST">
         <ul>
           <li>
-            <input type="text" name="Titolo_originale" value="" placeholder="Titolo originale">
+            <input type="text" name="titolo_originale" value="" placeholder="Titolo originale">
           </li>
           <li>
-            <input type="text" name="Nazione" value="" placeholder="Nazione">
+            <input type="text" name="nazione" value="" placeholder="Nazione">
           </li>
           <li>
-            <input type="text" name="Anno" value="" placeholder="Anno">
+            <input type="text" name="anno" value="" placeholder="Anno">
           </li>
           <li>
-            <input type="text" name="Genere" value="" placeholder="Genere">
+            <input type="text" name="genere" value="" placeholder="Genere">
           </li>
           <li>
-            <input type="text" name="Durata" value="" placeholder="Durata">
+            <input type="text" name="durata" value="" placeholder="Durata">
           </li>
           <li>
-            <input type="text" name="Regia" value="" placeholder="Regia">
+            <input type="text" name="regia" value="" placeholder="Regia">
           </li>
           <li>
-            <input type="text" name="Cast" value="" placeholder="Cast">
+            <input type="text" name="cast" value="" placeholder="Cast">
           </li>
           <li>
-            <input type="text" name="Produzione" value="" placeholder="Produzione">
+            <input type="text" name="produzione" value="" placeholder="Produzione">
           </li>
           <li>
-            <input type="text" name="Data_di_uscita" value="" placeholder="Data di uscita">
+            <input type="text" name="data_di_uscita" value="" placeholder="Data di uscita">
           </li>
           <li>
-            <textarea name="Trama" rows="10" cols="55" placeholder="Inserisci la trama"></textarea>
+            <textarea name="trama" rows="10" cols="55" placeholder="Inserisci la trama"></textarea>
           </li>
         </ul>
       </div>

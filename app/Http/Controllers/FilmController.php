@@ -73,7 +73,7 @@ class FilmController extends Controller
 
         // Ordiniamo la lista in modo decrescente e per 'id'
         if ($saved == true) {
-          $films = Film::orderBy('id', desc)->first();
+          $films = Film::orderBy('id')->first();
           return redirect()->route('films.index');
         }
         @dd('Non è stato salvato');

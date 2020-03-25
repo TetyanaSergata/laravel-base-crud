@@ -18,34 +18,34 @@
           </a>
         </li>
         <li>
-          Titolo originale: {{$film->Titolo_originale}}
+          Titolo originale: {{$film->titolo_originale}}
         </li>
         <li>
-          Nazione: {{$film->Nazione}}
+          Nazione: {{$film->nazione}}
         </li>
         <li>
-          Anno: {{$film->Anno}}
+          Anno: {{$film->anno}}
         </li>
         <li>
-          Genere: {{$film->Genere}}
+          Genere: {{$film->genere}}
         </li>
         <li>
-          Durata: {{$film->Durata}}
+          Durata: {{$film->durata}}
         </li>
         <li>
-          Regia: {{$film->Regia}}
+          Regia: {{$film->regia}}
         </li>
         <li>
-          Cast: {{$film->Cast}}
+          Cast: {{$film->cast}}
         </li>
         <li>
-          Produzione: {{$film->Produzione}}
+          Produzione: {{$film->produzione}}
         </li>
         <li>
-          Data di uscita: {{$film->Data_di_uscita}}
+          Data di uscita: {{$film->data_di_uscita}}
         </li>
         <li>
-          Trama: {{$film->Trama}}
+          Trama: {{$film->trama}}
         </li>
       </ul>
     </div>
