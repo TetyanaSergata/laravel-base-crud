@@ -15,14 +15,14 @@ class CreateFilmsTable extends Migration
     {
         Schema::create('films', function (Blueprint $table) {
             $table->id();
-            $table->varchar('Titolo_originale');
-            $table->varchar('Nazione');
+            $table->string('Titolo_originale');
+            $table->string('Nazione');
             $table->year('Anno');
-            $table->varchar('Genere');
+            $table->string('Genere');
             $table->smallint('Durata');
-            $table->varchar('Regia');
+            $table->string('Regia');
             $table->text('Cast');
-            $table->varchar('Produzione');
+            $table->string('Produzione');
             $table->date('Data_di_uscita');
             $table->text('Trama');
             $table->timestamps();

@@ -13,8 +13,9 @@
   @foreach ($films as $film)
     <div class="film_list">
       <ul>
-        <li>
-          Id: {{$film->id}}
+        <li><a href="{{route('films.show', $film['id'])}}">
+            Id: {{$film->id}}
+          </a>
         </li>
         <li>
           Titolo originale: {{$film->Titolo_originale}}

@@ -1,10 +1,20 @@
 @extends('layouts.layout')
 @section('header')
+  {{-- Controllo Validation --}}
+  @if ($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
   <h1>Inserisci un film</h1>
 @endsection
 @section('main')
   <div class="form_container">
-    <form class="" action="{{route('films.store')}}"  method="post">
+    <form action="{{route('films.store')}}"  method="post">
       @csrf
       <div class="form_list">
         <input name="_method" type="hidden" value="POST">

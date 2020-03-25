@@ -42,6 +42,18 @@ class FilmController extends Controller
         // dd($request->all());
         $data = $request->all();
         // @dd($data);
+
+        // $request->validate([
+        //   'Titolo_originale' => 'required|string|max:255',
+        //   'Nazione' => 'required|string|max:255',
+        //   // 'Anno' => 'required|year',
+        //   'Genere' => 'required|string|max:255',
+        //   'Durata' => 'required|numeric',
+        //   'Regia' => 'required|string|max:255',
+        //   'Produzione' => 'required|string',
+        //   // 'Data_di_uscita' => 'required|date'
+        // ]);
+
         $film = new Film;
 
         // $film->Titolo_originale = $data['Titolo_originale'];
@@ -59,7 +71,9 @@ class FilmController extends Controller
 
         $saved = $film->save();
 
-        if ($save == true) {
+        // Ordiniamo la lista in modo decrescente e per 'id'
+        if ($saved == true) {
+          $films = Film::orderBy('id', desc)->first();
           return redirect()->route('films.index');
         }
         @dd('Non è stato salvato');
@@ -73,7 +87,12 @@ class FilmController extends Controller
      */
     public function show($id)
     {
-        //
+      $films = Film::find($id);
+
+      if (empty($films)) {
+        abort('404');
+      }
+      return view('films.show', compact('films'));
     }
 
     /**
@@ -82,9 +101,13 @@ class FilmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Film $films)
     {
-        //
+      // @dd($films);
+      if (empty($films)) {
+        abort('404');
+      }
+      return view('films.create', compact($films));
     }
 
     /**
@@ -96,7 +119,7 @@ class FilmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
